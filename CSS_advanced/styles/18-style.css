@@ -125,6 +125,7 @@
 
 :where(button, input:is([type="button" i], [type="reset" i], [type="submit" i])) {
   -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -157,8 +158,9 @@
  */
 
 :where(input[type="search" i]) {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -2px;
 }
 
 /**
@@ -185,6 +187,7 @@
 
 ::-webkit-search-decoration {
   -webkit-appearance: none;
+  appearance: none;
 }
 
 /**
@@ -193,7 +196,8 @@
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
+  -webkit-appearance: button;
+  appearance: button;
   font: inherit; /* 2 */
 }
 
@@ -462,7 +466,7 @@ a[href]:active {
   --nav-item-font-size: var(--font-size-medium);
   --nav-item-letter-spacing: 0.4rem;
   --nav-item-display: inline-block;
-  --nav-item-margin: 0 0 3rem;
+  --nav-item-margin: 0 0 3rem 0;
   --nav-item-link-hover: var(--color-primary);
 }
 
@@ -470,46 +474,11 @@ a[href]:active {
   float: right;
 }
 
-.nav {
-  margin: 0;
-  padding: 0;
-}
-
-.nav ul {
-  list-style: none;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.nav .nav-item {
-  font-family: var(--nav-item-font-family);
-  font-weight: var(--nav-item-font-weight);
-  font-size: var(--nav-item-font-size);
-  letter-spacing: var(--nav-item-letter-spacing);
-  display: var(--nav-item-display);
-  margin: var(--nav-item-margin);
-}
-
-.nav .nav-link {
-  display: block;
-  padding: 0.5rem 1rem;
-}
-
-.nav .nav-link:hover {
-  color: var(--nav-item-link-hover);
-}
-
 nav {
   margin: 0;
   padding: 0;
-}
-
-nav ul {
   list-style: none;
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 
 nav .nav-item {
@@ -524,7 +493,6 @@ nav .nav-item {
 nav .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  position: relative;
 }
 
 nav .nav-link:hover {
