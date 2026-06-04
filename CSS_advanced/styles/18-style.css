@@ -160,7 +160,7 @@
 :where(input[type="search" i]) {
   -webkit-appearance: textfield;
   appearance: textfield;
-  outline-offset: -2px;
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -196,8 +196,8 @@
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  appearance: button;
+  -webkit-appearance: button; /* 1 */
+  appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
 
@@ -474,14 +474,14 @@ a[href]:active {
   float: right;
 }
 
-nav {
+.nav {
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
 }
 
-nav .nav-item {
+.nav .nav-item {
   font-family: var(--nav-item-font-family);
   font-weight: var(--nav-item-font-weight);
   font-size: var(--nav-item-font-size);
@@ -490,11 +490,11 @@ nav .nav-item {
   margin: var(--nav-item-margin);
 }
 
-nav .nav-link {
+.nav .nav-link {
   display: block;
   padding: 0.5rem 1rem;
 }
 
-nav .nav-link:hover {
+.nav .nav-link:hover {
   color: var(--nav-item-link-hover);
 }
